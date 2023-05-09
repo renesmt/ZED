@@ -4,9 +4,16 @@
 The code depends on Blossom V(https://pub.ista.ac.at/~vnk/papers/blossom5.pdf) to solve the ground states of planar graphs. One should try to compile a MATLAB version of Blossom V algorithm. 
 The Blossom V should be implemented in this way:
 
-``
-blossom($N_{node}$,$N_{edge}$)
-``
+
+`blossom(number of nodes, number of edges, weights)`: for complete graphs, the weights is sorted from left to right, from top to down in the adjacency matrix of the graph. For example,
+$$
+\left(\begin{array}{cc} 
+0.8944272 & 0.4472136\\
+-0.4472136 & -0.8944272
+\end{array}\right)
+$$
+
+`blossom2(number of nodes, number of edges, weights, edge pairs)`
 
 This code also includes a random regular graph generator.(https://www.mathworks.com/matlabcentral/fileexchange/29786-random-regular-generator)
 
