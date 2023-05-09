@@ -14,7 +14,7 @@ a_2 & a_4 & 0 & a_6\\
 a_3 & a_5 & a_6 & 0
 \end{array}\right)
 ```
-The value of weights should be taken in the order of $a_1,a_2,\cdots,a_6$.
+The `weights` should be  in the order of $[a_1,a_2,\cdots,a_6]$.
 
 `blossom2(number of nodes, number of edges, weights, edge pairs)`: for general graph. the `edge pairs` is in the form of $N_{\rm edge}\times 2$ matrix. For each row, the two elements correspond to the node index, from $0$ to $N_{\rm nodes}-1$.
 
