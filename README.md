@@ -30,7 +30,7 @@ This code also includes a random regular graph generator.(https://www.mathworks.
   3. Initialize the solver by `SSolver.m`. For example,    
    `solver = SSolver('square');`
   4. Solve the bond configuartion $J_{ij}$ by initialized solver.   
-   `ground_state = solver(nodes);`
+   `ground_state = solver(nodes);`   
   For non-planar graph:   
   `ground_state = solver(JJJ);`
 ## Solve multiple instances and compute the zero-energy droplets
