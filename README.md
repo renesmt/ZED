@@ -1,6 +1,6 @@
 # ZED
 ## Before use
-The author is keeping improving the readability of this code. Please do not hesitate to contact the author (smutian@wustl.edu) if you are confused by anything.
+The author is keeping improving the readability of this code: now it is terrible :(. Please do not hesitate to contact the author (smutian@wustl.edu) if you are confused by anything.
 
 The code depends on Blossom V (https://pub.ista.ac.at/~vnk/papers/blossom5.pdf) to solve the ground states of planar graphs. One should try to compile a MATLAB version of Blossom V algorithm. 
 The Blossom V should be implemented in this way:
