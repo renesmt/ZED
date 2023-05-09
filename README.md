@@ -23,8 +23,8 @@ You can also contact the author(smutian@wustl.edu) for a compiled UNIX matlab fu
 This code also includes a random regular graph generator.(https://www.mathworks.com/matlabcentral/fileexchange/29786-random-regular-generator), which is already included in `GGenerator.m`.
 
 ## Solve single instance
-  1. Initialize the bond configuration generator by `GGenerator.m`. For example, `generator = GGenerator('square');`
-  2. Generate the bond configuartion. For example, generate a $4\times 5$ (number of plaquettes) system with seed $12321$ by: `[JJJ i1 i2 nodes c1 c2] = generator(4,5,12321);`
+  1. Initialize the bond configuration generator by `GGenerator.m`. For example, \\ `generator = GGenerator('square');`
+  2. Generate the bond configuartion. For example, generate a $4\times 5$ (number of plaquettes) system with seed $12321$ by: `[JJJ, i1, i2, nodes, c1, c2] = generator(4,5,12321);`
   3. Initialize the solver by `SSolver.m`. For example, `solver = SSolver('square');`
   4. Solve the bond configuartion $J_{ij}$ by initialized sovler. 
 ## Solve multiple instances and compute the zero-energy droplets
