@@ -29,6 +29,9 @@ This code also includes a random regular graph generator.(https://www.mathworks.
    `[JJJ, i1, i2, nodes, c1, c2] = generator(4,5,12321);`   
   3. Initialize the solver by `SSolver.m`. For example,    
    `solver = SSolver('square');`
-  4. Solve the bond configuartion $J_{ij}$ by initialized sovler. 
+  4. Solve the bond configuartion $J_{ij}$ by initialized solver.   
+   `ground_state = solver(nodes);`
+  For non-planar graph:   
+  `ground_state = solver(JJJ);`
 ## Solve multiple instances and compute the zero-energy droplets
 Just set the parameters in `CritDroplet.m`, including lattice type, system size, number of bond configurations and additional parameters that is necessary for some specific kinds of lattices such as random regular graph.
