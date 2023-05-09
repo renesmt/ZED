@@ -6,10 +6,10 @@ The Blossom V should be implemented in this way:
 
 
 `blossom(number of nodes, number of edges, weights)`: for complete graphs, the weights is sorted from left to right, from top to down in the adjacency matrix of the graph. For example,
-$\left(\begin{array}{cc} 
-0.8944272 & 0.4472136\\
--0.4472136 & -0.8944272
-\end{array}\right)$
+
+```math
+begin{bmatrix}X\\Y\end{bmatrix}
+```
 
 `blossom2(number of nodes, number of edges, weights, edge pairs)`
 
