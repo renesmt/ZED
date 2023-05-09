@@ -1,4 +1,5 @@
 # ZED
+This package of code could be used to compute the zero-energy droplets of spin glasses, and compute some basic statistical properties of these droplets, such as droplet size or critical threshold values.
 ## Before use
 The author is keeping improving the readability of this code: now it is terrible :(. Please do not hesitate to contact the author (smutian@wustl.edu) if you are confused by anything.
 
