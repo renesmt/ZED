@@ -838,6 +838,7 @@ index1 = NNN/2;
 index2 = index1+1;
 end
 
+%golan pundak (2023). Random Regular generator (https://www.mathworks.com/matlabcentral/fileexchange/29786-random-regular-generator), MATLAB Central File Exchange. Retrieved May 9, 2023. 
 function [JJJ index1 index2 nodes center1 center2] = RRG(vertNum, deg)
 nodes = -1;
 center1 = -1;
