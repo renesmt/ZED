@@ -98,8 +98,7 @@ end
 if seed~=0
     rng(seed);
 end
-%% 生成方形格点的对偶图.
-ncenters = hsize*wsize+1;   %这已经考虑了极点.
+ncenters = hsize*wsize+1;   
 nodes = [];
 for i = 1:ncenters
     nodes(i).neib = [];
@@ -187,7 +186,6 @@ center2 = center1+wsize;
 end
 
 function [JJJ index1 index2 nodes center1 center2 cords0 bd_indices] = Honeycomb(hsize,wsize,seed)
-%此程序用来计算蜂巢格点的LinkDifference.它很不完善,因为只是考虑了边积以及对偶图.
 if mod(hsize,2)~=0 || mod(wsize,2)==0
     error('Input sizes must both be even in height and odd in width!');
 end
@@ -195,7 +193,6 @@ if seed~=0
     rng(seed);
 end
 cords = zeros(6*hsize*wsize,1);
-%% 神来一笔:用复数进行序号的标记!
 iii = sqrt(-1);
 count = 0;
 for i = 1:hsize
@@ -213,8 +210,7 @@ end
 cords = unique(cords);
 nsites = length(cords);
 modelold = spalloc(nsites,nsites,12*nsites);
-%% 生成蜂巢格点的对偶图.
-ncenters = hsize*wsize+1;   %这已经考虑了极点.
+ncenters = hsize*wsize+1; 
 nodes = [];
 for i = 1:ncenters
     nodes(i).neib = [];
@@ -371,7 +367,7 @@ end
 if seed~=0
     rng(seed);
 end
-ncenters = hsize*wsize+1;   %这已经考虑了极点.
+ncenters = hsize*wsize+1;   
 layersites = floor(wsize/2)+2;
 nsites = (hsize/2)*(layersites*2-1)+layersites;
 modelold = spalloc(nsites,nsites,nsites*6);
@@ -524,7 +520,7 @@ if seed~=0
     rng(seed);
 end
 wsize = hsize*2+1;
-ncenters = hsize*wsize+1;   %这已经考虑了极点.
+ncenters = hsize*wsize+1;   
 layersites = floor(wsize/2)+2;
 nsites = (hsize/2)*(layersites*2-1)+layersites;
 modelold = spalloc(nsites,nsites,nsites*6);

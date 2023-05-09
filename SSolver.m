@@ -12,8 +12,7 @@ end
 %% Getting GS via MWPM, only deal with free boundary conditions.
 function state = GS_nodes(nodes)
 ncenters = length(nodes);
-%% 找出奇异格.
-strangecell = zeros(ncenters,1); %这个二元数组用来储存奇异格的序号.
+strangecell = zeros(ncenters,1); 
 for i = 1:ncenters
     iweights = nodes(i).weight;
     if mod(sum(iweights<0),2)~=0
@@ -29,7 +28,7 @@ for i = 1:ncenters
     ineibs = nodes(i).neib;
     nneibs = length(ineibs);
     for j = 1:nneibs
-        if ggg(i,ineibs(j))==0 %表示还没有被记录过
+        if ggg(i,ineibs(j))==0 
             ggg(i,ineibs(j)) = iweights(j);
             linkproducts(i,ineibs(j)) = sign(iweights(j));
         else
@@ -43,7 +42,6 @@ end
 dualmodel = abs(ggg);
 ggg = graph(dualmodel);
 
-%% 构造迪科斯彻Dijkstra完全图,然后投喂给Blossom设施.
 dists = distances(ggg,strangecell,strangecell);
 noutputsites = nstrangecell;
 noutputedges = (nstrangecell-1)*nstrangecell/2;
@@ -66,7 +64,6 @@ for i = 1:nmatching
 end
 unsat_bonds = unsat_bonds(1:count,:);
 
-%% 输出!
 for i=1:size(unsat_bonds,1)
     linkproducts(unsat_bonds(i,1),unsat_bonds(i,2)) = ...,
         linkproducts(unsat_bonds(i,1),unsat_bonds(i,2))*(-1);
@@ -75,17 +72,11 @@ for i=1:size(unsat_bonds,1)
 end
 
 
-%%  输出状态!
 nsites = max([nodes.left]);
 nsites = max(nsites,max([nodes.right]));
 edgestate = spalloc(nsites,nsites,12*nsites);
 state = zeros(nsites,1);
 for index = 1:ncenters
-    %这里考虑两种情况.
-    %对于非边界点,我们找到它的邻居,并且按照左,右,上下的次序分别定位它们的序号.
-    %定位序号之后,我们根据几何的方位对edgestate进行赋值.
-    %对于边界点,重边的几何方位并不重要:重要的是哪条边必须被满足.
-    smallindex = 0;   %对偶重边,大边自动满足,只需要考虑小边
     ineibs = nodes(index).neib;
     ilefts = nodes(index).left;
     irights = nodes(index).right;
