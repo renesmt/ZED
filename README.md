@@ -5,8 +5,7 @@ The code depends on Blossom V(https://pub.ista.ac.at/~vnk/papers/blossom5.pdf) t
 The Blossom V should be implemented in this way:
 
 
-`blossom(number of nodes, number of edges, weights)`: for complete graphs, the weights is sorted from left to right, from top to down in the adjacency matrix of the graph. For example,
-
+`blossom(number of nodes, number of edges, weights)`: for complete graphs, the weights is sorted from left to right, from top to down in the adjacency matrix of the graph. For example, for such kind of adjacency matrix:
 ```math
 \left(\begin{array}{cccc} 
 0 & a_1 & a_2 & a_3\\ 
@@ -15,6 +14,7 @@ a_2 & a_4 & 0 & a_6\\
 a_3 & a_5 & a_6 & 0\\
 \end{array}\right)
 ```
+The value of weights should be taken in the order of $a_1,a_2,\cdots,a_6$.
 
 `blossom2(number of nodes, number of edges, weights, edge pairs)`
 
