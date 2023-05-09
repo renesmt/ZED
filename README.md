@@ -20,7 +20,7 @@ The `weights` should be  in the order of $[a_1,a_2,\cdots,a_6]$.
 
 An exact solver is also necessary. Here, Gurobi(www.gurobi.com) is adopted. Other exact solvers are also okay, as long as they are implemented in this format:  
 `ground_state = GurobiComputeGround(JJJ)`,   
-where `JJJ` is the adjacency matrix of the bond configuration $K_{ij}$.
+where `JJJ` is the adjacency matrix of the bond configuration $J_{ij}$.
 
 You can also contact the author(smutian@wustl.edu) for a compiled UNIX matlab function.
 
