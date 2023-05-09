@@ -20,7 +20,7 @@ The `weights` should be  in the order of $[a_1,a_2,\cdots,a_6]$.
 
 You can also contact the author(smutian@wustl.edu) for a compiled UNIX matlab function.
 
-This code also includes a random regular graph generator.(https://www.mathworks.com/matlabcentral/fileexchange/29786-random-regular-generator), which is already included in `GGenerator.m`.
+This code also includes a random regular graph generator(https://www.mathworks.com/matlabcentral/fileexchange/29786-random-regular-generator), which is already included in `GGenerator.m`.
 
 ## Solve single instance
   1. Initialize the bond configuration generator by `GGenerator.m`. For example,     
