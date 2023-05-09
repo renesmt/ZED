@@ -19,7 +19,7 @@ The `weights` should be  in the order of $[a_1,a_2,\cdots,a_6]$.
 `blossom2(number of nodes, number of edges, weights, edge pairs)`: for general graphs. the `edge pairs` is in the form of $N_{\rm edge}\times 2$ matrix. For each row, the two elements correspond to the node index, from $0$ to $N_{\rm nodes}-1$.
 
 An exact solver is also necessary. Here, Gurobi(www.gurobi.com) is adopted. Other exact solvers are also okay, as long as they are implemented in this format:  
-`ground_state = GurobiComputeGround(JJJ)`,
+`ground_state = GurobiComputeGround(JJJ)`,   
 where `JJJ` is the adjacency matrix of the bond configuration $K_{ij}$.
 
 You can also contact the author(smutian@wustl.edu) for a compiled UNIX matlab function.
