@@ -23,8 +23,8 @@ You can also contact the author(smutian@wustl.edu) for a compiled UNIX matlab fu
 This code also includes a random regular graph generator.(https://www.mathworks.com/matlabcentral/fileexchange/29786-random-regular-generator), which is already included in `GGenerator.m`.
 
 ## Solve single instance
-  1. Initialize the bond configuration generator by `GGenerator.m`.
-  2. Initialize the solver by `SSolver.m`.
-  3. Solve the bond configuartion $J_{ij}$ by initialized sovler.
+  1. Initialize the bond configuration generator by `GGenerator.m`. For example, ```generator = GGenerator('square');```
+  3. Initialize the solver by `SSolver.m`. For example,
+  4. Solve the bond configuartion $J_{ij}$ by initialized sovler.
 ## Solve multiple instances and compute the zero-energy droplets
 Just set the parameters in `CritDroplet.m`, including lattice type, system size, number of bond configurations and additional parameters that is necessary for some specific kinds of lattices such as random regular graph.
