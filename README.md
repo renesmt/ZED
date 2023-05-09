@@ -24,14 +24,15 @@ This code also includes a random regular graph generator.(https://www.mathworks.
 
 ## Solve single instance
   1. Initialize the bond configuration generator by `GGenerator.m`. For example,     
-  `generator = GGenerator('square');`
+  `generator = GGenerator("square");`
   2. Generate the bond configuartion. For example, generate a $4\times 5$ (number of plaquettes) system with seed $12321$ by:   
    `[JJJ, i1, i2, nodes, c1, c2] = generator(4,5,12321);`   
   3. Initialize the solver by `SSolver.m`. For example,    
-   `solver = SSolver('square');`
+   `solver = SSolver("square");`
   4. Solve the bond configuartion $J_{ij}$ by initialized solver.   
    `ground_state = solver(nodes);`   
   For non-planar graph:   
   `ground_state = solver(JJJ);`
 ## Solve multiple instances and compute the zero-energy droplets
-Just set the parameters in `CritDroplet.m`, including lattice type, system size, number of bond configurations and additional parameters that is necessary for some specific kinds of lattices such as random regular graph.
+Just set the parameters in `CritDroplet.m`, including lattice type, system size, number of bond configurations, random number seed and additional parameters that is necessary for some specific kinds of lattices such as random regular graph. For example, to compute $10^5$ square instances with $L=128$ with random number seed $12321$:     
+`CritDroplet("square",128,1e5,12321,0)`.
