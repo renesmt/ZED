@@ -82,6 +82,7 @@ for index = 1:ncenters
     irights = nodes(index).right;
     iweights = nodes(index).weight;
     boundmatch = find(ineibs==ncenters);
+    smallindex = 0;
     if length(boundmatch)>=2
         iweights = nodes(index).weight;
         [minim minid] = min(abs(iweights(boundmatch)));
